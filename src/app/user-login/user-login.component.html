@@ -1,0 +1,17 @@
+<div class="login-div">
+    <div class="login">
+        <div class="card">
+            <form [formGroup]="userLogin" (submit)="loginUser()">
+                <input type="text" formControlName="userName" id="name" placeholder="User Name">
+                <input type="number" formControlName="phoneNumber" id="email" placeholder="Phone number">
+                <div class="buttons">
+                    <button class="register-button" routerLink="/register">Register</button>
+                    <button type="submit" class="login-button">Login</button>
+                </div>
+                <div *ngIf="errorMessage != null">
+                    <label style="color: red;">{{errorMessage}}</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
